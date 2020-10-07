@@ -1,41 +1,36 @@
+// note: sides are 0 = Red, 1 = Blue, 2 = Green, 3 = Civilian
 class CfgPatches
 {
     class spagistan_c_troops
     {
-        units[] = {};
-        weapons[] = {};
         name = "Spagistan Mod infantry configuration";
-        requiredAddons[] =
-        {
-            "spagistan_main",
-            "spagistan_c_weapons",
-            "spagistan_c_gear"
-        };
         author = "Spagistan Mod Authors";
         url = "https://spagistan.com/";
-        version = 0;
+        version = "0";
+        requiredAddons[] =
+        {
+            "rhssaf_c_troops",
+        };
+        units[] = {};
+        weapons[] = {};
     };
 };
 
 class CfgVehicles
 {
-    // first soldier class is for inheritance purposes only.
-    // for a soldier type you want to put down in game, inherit from this class
-    // and set scope and scopeCurator to 2.
+    // base class for Spagistan Armed Forces faction
     class rhssaf_soldier_m10_base;
     class spagistan_soldier_spagistan_army_base: rhssaf_soldier_m10_base
     {
-        // The spagistani m10 retexture needs to link to this class
         dlc = "spagistan";
         author = "Spagistan Mod Authors";
-        scope = 1;
-        identityTypes[] = {};
+        identityTypes[] = {}; //todo
         side = 1;
         faction = "spagistan_faction_spagistan_army";
+        displayName = "Rifleman";
         genericNames = "SpagistaniMen";
+        vehicleClass = "spagistan_vehclass_spagistan_infantry";
         editorSubcategory = "spagistan_EdSubcat_spagistan_infantry";
-        uniformClass = ""; //todo
-        hiddenSelectionsTextures[] = {}; //todo
 
         // these say todo but they're actually just here to overwrite the
         // inherited values from RHS
@@ -49,8 +44,65 @@ class CfgVehicles
         respawnLinkedItems[] = {}; //todo
     };
 
+    // test class for suspected m93 uniform
+    class rhssaf_soldier_army_oakleaf_base;
+    class spagistan_soldier_m93_spagpat: rhssaf_soldier_army_oakleaf_base
+    {
+        dlc = "spagistan";
+        author = "Spagistan Mod Authors";
+        scope = 1;
+        identityTypes[] = {}; //todo
+        side = 1;
+        faction = "spagistan_faction_spagistan_army";
+        displayName = "Rifleman";
+        genericNames = "SpagistaniMen";
+        vehicleClass = "spagistan_vehclass_spagistan_infantry";
+        editorSubcategory = "spagistan_EdSubcat_spagistan_infantry";
+
+        uniformClass = "spagistan_uniform_spagistan_m93_spagpat";
+        hiddenSelectionsTextures[] =
+        {
+            "\spagistan\addons\spagistan_t_gear\data\spagistan_uniform_m93_spagpat_co.paa"
+        };
+
+        // these say todo but they're actually just here to overwrite the
+        // inherited values from RHS
+        weapons[] = {}; //todo
+        respawnWeapons[] = {}; //todo
+        Items[] = {}; //todo
+        RespawnItems[] = {}; //todo
+        magazines[] = {}; //todo
+        respawnMagazines[] = {}; //todo
+        linkedItems[] = {}; //todo
+        respawnLinkedItems[] = {}; //todo
+    };
+    
+    // Second-order classes. Inherit from these.
+    // This one's (currently) just a dummy class for the uniform.
+    class spagistan_soldier_m10_spagpat: spagistan_soldier_spagistan_army_base
+    {
+        scope = 1;
+        // inherits model info from grandparent rhssaf_soldier_m10_base
+        uniformClass = "spagistan_uniform_spagistan_m10_spagpat";
+        hiddenSelectionsTextures[] =
+        {
+            "\spagistan\addons\spagistan_t_gear\data\spagistan_uniform_m10_spagpat_co.paa"
+        };
+    };
+
+    class spagistan_soldier_m10_spagpat_summer: spagistan_soldier_spagistan_army_base
+    {
+        scope = 1;
+        uniformClass = "spagistan_uniform_m10_spagpat_summer";
+        model = "\rhssaf\addons\rhssaf_m_uniform_m10\rhssaf_uniform_m10_summer";
+        hiddenSelectionsTextures[] =
+        {
+            "\spagistan\addons\spagistan_t_gear\data\spagistan_uniform_m10_spagpat_summer_co.paa"
+        };
+    };
+
     // hot tip! inherit this class to make new rifleman-y classes
-    class spagistan_soldier_spagistan_army_rifleman: spagistan_soldier_spagistan_army_base
+    class spagistan_soldier_spagistan_army_rifleman: spagistan_soldier_m10_spagpat_summer
     {
         scope = 2;
         scopeCurator = 2;
@@ -85,42 +137,44 @@ class CfgVehicles
     };
 };
 
-class CfgGroups
-{
-    class West
-    {
-        class spagistan_faction_spagistan_army 
-        {
-            name = "Spagistan Armed Forces";
-            class spagistan_group_spagistan_army_infantry
-            {
-                name = "Infantry Groups";
-                aliveCategory = "Infantry";
-                class spagistan_group_spagistan_army_infantry_squad
-                {
-                    name = "Infantry Squad";
-                    faction = "spagistan_faction_spagistan_army";
-                    side = 1;
-                    rarityGroup = 0.75;
-                    icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
-                    class Unit0
-                    {
-                        //todo
-                    };
-                    class Unit1
-                    {
-                        //todo
-                    };
-                    class Unit2
-                    {
-                        side = 1;
-                        vehicle = "spagistan_soldier_spagistan_army_rifleman";
-                        rank = "PRIVATE";
-                        position[] = {5,0,0}; // I have no idea what this does.
+// class CfgGroups
+// {
+//     class West
+//     {
+//         class spagistan_faction_spagistan_army 
+//         {
+//             name = "Spagistan Armed Forces";
+//             class spagistan_group_spagistan_army_infantry
+//             {
+//                 name = "Infantry Groups";
+//                 aliveCategory = "Infantry";
+//                 class spagistan_group_spagistan_army_infantry_squad
+//                 {
+//                     name = "Infantry Squad";
+//                     faction = "spagistan_faction_spagistan_army";
+//                     side = 1;
+//                     rarityGroup = 0.75;
+//                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
+//                     class Unit0
+//                     {
+//                         //todo
+//                     };
+//                     class Unit1
+//                     {
+//                         //todo
+//                     };
+//                     class Unit2
+//                     {
+//                         side = 1;
+//                         vehicle = "spagistan_soldier_spagistan_army_rifleman";
+//                         rank = "PRIVATE";
+//                         // Defines the unit's initial position relative to where
+//                         // you drop the group in the editor. Need to test.
+//                         position[] = {5,0,0};
 
-                    };
-                };
-            };
-        };
-    };
-};
+//                     };
+//                 };
+//             };
+//         };
+//     };
+// };

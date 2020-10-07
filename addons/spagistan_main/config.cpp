@@ -6,19 +6,19 @@ class CfgPatches
 {
     class spagistan_main
     {
+        name = "Spagistan Mod main";
+        author = "Spagistan Mod Authors";
+        url = "https://spagistan.com";
+        version = "0";
+        requiredAddons[] =
+        {
+            "spagistan_main_loadorder"
+        };
         units[] =
         {
             "spagistan_flag_spagistan"
         };
         weapons[] = {};
-        name = "Spagistan Armed Forces Mod main";
-        requiredAddons =
-        {
-            "spagistan_main_loadorder"
-        };
-        author = "Spagistan Mod Authors";
-        url = "https://spagistan.com";
-        version = "0";
     };
 };
 
@@ -34,8 +34,7 @@ class CfgAddons
                 "spagistan_main_loadorder",
                 "spagistan_c_gear",
                 "spagistan_c_troops",
-                "spagistan_c_vehicles",
-                "spagistan_c_weapons"
+                "spagistan_c_vehicles"
             };
         };
     };
@@ -59,7 +58,7 @@ class CfgMods
         name = "Spagistan Armed Forces Mod";
         overview = "Welcome to the Spagistan Armed Forces!";
         action = "https://spagistan.com/";
-        dir = "spag";
+        dir = "spagistan";
     };
 };
 
@@ -70,7 +69,7 @@ class CfgVehicles
     {
         class EventHandlers
         {
-            init="(_this select 0) setFlagTexture '\spagistan\addons\spagistan_main\flags\spagistan_flag_spagistan_co.paa'";
+            init="(_this select 0) setFlagTexture '\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa'";
         };
         dlc = "Spagistan Armed Forces Mod";
         author = "Spagistan Mod Authors";
@@ -87,8 +86,8 @@ class CfgMarkers
     class spagistan_flag_spagistan: flag_NATO
     {
         name = "Spagistan";
-        icon = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_co.paa";
-        texture = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_co.paa";
+        icon = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
+        texture = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
     };
 };
 
@@ -121,14 +120,17 @@ class CfgFactionClasses
         priority = 1;
         side = 1;
         genericNames = "SpagistaniMen";
+        author = "Spagistan Mod Authors";
+        icon = "\spagistan\addons\spagistan_main\data\spagistan_logo_co.paa";
+        flag = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
+        backpack_tf_faction_radio = "TFAR_mr3000";
+        personal_tf_faction_radio = "TFAR_anprc148jem";
     };
-    author = "Spagistan Mod Authors";
-    icon = "\spagistan\addons\spagistan_main\data\spagistan_logo_co.paa";
-    flag = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_co.paa";
-    backpack_tf_faction_radio = "TFAR_mr3000";
-    personal_tf_faction_radio = "TFAR_anprc148jem";
+    
 };
 
+// Don't really know what this does or why this is here. Just at least want to
+// overwrite anything accidentally inherited from RHS classes.
 class CfgVehicleClasses
 {
     class spagistan_vehclass_spagistan_infantry
@@ -137,10 +139,29 @@ class CfgVehicleClasses
     };
 };
 
+class CfgEditorCategories
+{
+    class spagistan_EdCategory_spagistan
+    {
+        displayName = "Spagistan";
+    };
+};
+
 class CfgEditorSubcategories
 {
     class spagistan_EdSubcat_spagistan_infantry
     {
         displayname = "Infantry";
+    };
+};
+
+class CfgUnitInsignia
+{
+    class spagistan_insignia_spagistan
+    {
+        displayName = "Spagistan";
+        author = "Spagistan Mod Authors";
+        texture = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
+        textureVehicle = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
     };
 };
