@@ -26,7 +26,6 @@ class CfgPatches
             "Item_spagistan_patrolcap_spagpat",
             "Item_spagistan_uniform_m10_spagpat",
             "Item_spagistan_uniform_m10_spagpat_summer",
-            "Item_spagistan_uniform_m93_spagpat",
             "Vest_spagistan_vest_md12_spagpat"
         };
         weapons[] = {
@@ -41,7 +40,6 @@ class CfgPatches
             "spagistan_patrolcap_spagpat",
             "spagistan_uniform_m10_spagpat",
             "spagistan_uniform_m10_spagpat_summer",
-            "spagistan_uniform_m93_spagpat",
             "spagistan_vest_md12_spagpat"
         };
     };
@@ -199,28 +197,6 @@ class CfgWeapons
                 "camo"
             };
         };
-    };
-    class spagistan_uniform_m93_spagpat: rhssaf_uniform_m93_oakleaf
-    {
-        // this is not an m93
-        dlc = "spagistan";
-        author = "Spagistan Mod Authors";
-        displayName = "M93 Test Uniform (Spagpat)";
-        hiddenSelectionsTextures[] =
-        {
-            "\spagistan\addons\spagistan_t_gear\data\spagistan_uniform_m93_spagpat_co.paa"
-        };
-        class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="spagistan_soldier_m93_spagpat";
-			containerClass="Supply60";
-			mass=40;
-			hiddenSelections[]=
-			{
-				"camo"
-			};
-		};
     };
     class spagistan_vest_md12_spagpat: rhssaf_vest_md12_digital
     {
@@ -431,20 +407,6 @@ class CfgVehicles
             class spagistan_uniform_m10_spagpat_summer
             {
                 name = "spagistan_uniform_m10_spagpat_summer";
-                count = 1;
-            };
-        };
-    };
-    class Item_spagistan_uniform_m93_spagpat: spagistan_Item_Base_F
-    {
-        displayName = "M93 Test Uniform (Spagpat)";
-        editorSubcategory = "EdSubcat_Uniforms";
-        vehicleClass = "ItemsUniforms";
-        class TransportItems
-        {
-            class spagistan_uniform_m93_spagpat
-            {
-                name = "spagistan_uniform_m93_spagpat";
                 count = 1;
             };
         };

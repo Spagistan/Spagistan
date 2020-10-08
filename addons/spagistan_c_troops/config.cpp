@@ -43,39 +43,6 @@ class CfgVehicles
         linkedItems[] = {}; //todo
         respawnLinkedItems[] = {}; //todo
     };
-
-    // test class for suspected m93 uniform
-    class rhssaf_soldier_army_oakleaf_base;
-    class spagistan_soldier_m93_spagpat: rhssaf_soldier_army_oakleaf_base
-    {
-        dlc = "spagistan";
-        author = "Spagistan Mod Authors";
-        scope = 1;
-        identityTypes[] = {}; //todo
-        side = 1;
-        faction = "spagistan_faction_spagistan_army";
-        displayName = "Rifleman";
-        genericNames = "SpagistaniMen";
-        vehicleClass = "spagistan_vehclass_spagistan_infantry";
-        editorSubcategory = "spagistan_EdSubcat_spagistan_infantry";
-
-        uniformClass = "spagistan_uniform_spagistan_m93_spagpat";
-        hiddenSelectionsTextures[] =
-        {
-            "\spagistan\addons\spagistan_t_gear\data\spagistan_uniform_m93_spagpat_co.paa"
-        };
-
-        // these say todo but they're actually just here to overwrite the
-        // inherited values from RHS
-        weapons[] = {}; //todo
-        respawnWeapons[] = {}; //todo
-        Items[] = {}; //todo
-        RespawnItems[] = {}; //todo
-        magazines[] = {}; //todo
-        respawnMagazines[] = {}; //todo
-        linkedItems[] = {}; //todo
-        respawnLinkedItems[] = {}; //todo
-    };
     
     // Second-order classes. Inherit from these.
     // This one's (currently) just a dummy class for the uniform.
