@@ -77,12 +77,12 @@ class CfgVehicles
         };
         magazines[] =
         {
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
             "rhs_mag_rgd5",
             "rhs_mag_rdg2_white"
         };
@@ -216,6 +216,30 @@ class CfgVehicles
             "Throw",
             "Put"
         };
+        magazines[] =
+        {
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_mag_rgd5",
+            "rhs_mag_rdg2_white",
+            "rhs_rpg26_mag"
+        };
+        respawnMagazines[] =
+        {
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_mag_rgd5",
+            "rhs_mag_rdg2_white",
+            "rhs_rpg26_mag"
+        };
     };
     class spagistan_soldier_spagistan_army_grenadier: spagistan_soldier_spagistan_army_rifleman
     {
@@ -236,12 +260,12 @@ class CfgVehicles
         };
         magazines[] =
         {
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
             "rhs_VOG25",
             "rhs_VOG25",
             "rhs_VOG25",
@@ -253,12 +277,12 @@ class CfgVehicles
         };
         respawnMagazines[] =
         {
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
             "rhs_VOG25",
             "rhs_VOG25",
             "rhs_VOG25",
@@ -306,15 +330,17 @@ class CfgVehicles
         };
         magazines[] =
         {
-            "rhs_100Rnd_762x54mmR",
-            "rhs_100Rnd_762x54mmR",
+            "rhs_100Rnd_762x54mmR_7BZ3",
+            "rhs_100Rnd_762x54mmR_7BZ3",
+            "rhs_100Rnd_762x54mmR_7BZ3",
             "rhs_mag_rgd5",
             "rhs_mag_rdg2_white"
         };
         respawnMagazines[] =
         {
-            "rhs_100Rnd_762x54mmR",
-            "rhs_100Rnd_762x54mmR",
+            "rhs_100Rnd_762x54mmR_7BZ3",
+            "rhs_100Rnd_762x54mmR_7BZ3",
+            "rhs_100Rnd_762x54mmR_7BZ3",
             "rhs_mag_rgd5",
             "rhs_mag_rdg2_white"
         };
@@ -367,12 +393,12 @@ class CfgVehicles
         };
         magazines[] =
         {
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
-            "rhs_30rnd_545x39_7N10_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
+            "rhs_30rnd_545x39_7N22_AK",
             "rhs_mag_9x18_8_57N181S",
             "rhs_mag_9x18_8_57N181S",
             "rhs_mag_rgd5",
