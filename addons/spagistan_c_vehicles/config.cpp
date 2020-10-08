@@ -26,7 +26,6 @@ class CfgVehicles
         scope = 2;
         scopeCurator = 2;
         side = 1;
-        editorCategory = "spagistan_EdCategory_spagistan";
         faction = "spagistan_faction_spagistan_army";
         hiddenSelectionsTextures[] =
         {
