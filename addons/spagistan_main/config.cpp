@@ -100,29 +100,29 @@ class CfgWorlds
             class FirstNames
             {
                 spag = "Spag";
-                kirill= "Kirill";
-                aziz= "Aziz";
+                kirill = "Kirill";
+                aziz = "Aziz";
                 iskander= "Iskander";
-                timur = "Timur"
-                abdullo = "Abdullo" 
-                ruslan - "Ruslan"
-                rustam = "Rustam"
-                saddam = "Saddam"    
-                daryush = "Daryush"    
+                timur = "Timur";
+                abdullo = "Abdullo";
+                ruslan = "Ruslan";
+                rustam = "Rustam";
+                saddam = "Saddam";
+                daryush = "Daryush";
             };
             
             class LastNames
             {
                 hetta = "Hetta";
                 nizhnikov = "Nizhnikov";
-                aliyev = "Aliyev"
-                shahin = "Shahin"
-                aydin = "Aydin"
-                rahmon = "Rahmon"
-                alizoda = "Alizoda"
-                hussein = "Hussein"
-                nurmagomedov = "Nurmagomedov"
-                azad = "Azad"    
+                aliyev = "Aliyev";
+                shahin = "Shahin";
+                aydin = "Aydin";
+                rahmon = "Rahmon";
+                alizoda = "Alizoda";
+                hussein = "Hussein";
+                nurmagomedov = "Nurmagomedov";
+                azad = "Azad";
             };
         };
     };
