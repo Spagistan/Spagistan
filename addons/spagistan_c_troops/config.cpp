@@ -417,6 +417,7 @@ class CfgVehicles
             "rhs_mag_rgd5",
             "rhs_mag_rdg2_white"
         };
+        backpack = "spagistan_TFAR_m3000";
     };
 };
 
