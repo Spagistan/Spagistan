@@ -100,7 +100,7 @@ class CfgWorlds
             class FirstNames
             {
                 spag = "Spag";
-                kirill= "Kirill";
+                kirill = "Kirill";
                 aziz = "Aziz";
                 iskander= "Iskander";
                 timur = "Timur";
