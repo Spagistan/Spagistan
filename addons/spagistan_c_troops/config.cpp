@@ -24,12 +24,16 @@ class CfgPatches
         weapons[] = {};
     };
 };
-
+// who knows if these are necessary but RHS has them and, again, game modding is cargo cult bulshit
 class CfgVehicles
 {
     // base class for Spagistan Armed Forces faction
     class rhssaf_soldier_m10_base;
-    class spagistan_soldier_spagistan_army_base: rhssaf_soldier_m10_base
+    class dummy_class_for_subclass_inheritance: rhssaf_soldier_m10_base
+    {
+        class EventHandlers;
+    };
+    class spagistan_soldier_spagistan_army_base: dummy_class_for_subclass_inheritance
     {
         dlc = "spagistan";
         author = "Spagistan Mod Authors";
@@ -47,14 +51,7 @@ class CfgVehicles
         displayName = "Rifleman";
         genericNames = "SpagistaniMen";
         vehicleClass = "spagistan_vehclass_spagistan_infantry";
-        editorSubcategory = "spagistan_EdSubcat_spagistan_infantry";
-        class EventHandlers
-        {
-            class RHS_NVG_Check
-			{
-				init="_this call rhs_fnc_nvgHandler";
-			};
-        };
+        editorSubcategory = "spagistan_EdSubcat_spagistan_infantry";        
         weapons[] =
         {
             "rhs_weap_ak74m_dtk",
@@ -108,11 +105,23 @@ class CfgVehicles
         };
         respawnLinkedItems[] =
         {
+            "spagistan_helmet_m97_spagpat",
             "spagistan_vest_md12_spagpat",
             "ItemMap",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"
+        };
+        headgearList[] = 
+        {
+            "spagistan_helmet_m97_spagpat",
+            "spagistan_helmet_m97_spagpat_black_ess",
+            "spagistan_helmet_m97_spagpat_black_ess_bare",
+            "spagistan_helmet_m97_veil_spagpat"
+        };
+        class EventHandlers: Eventhandlers
+        {
+            init="if (local (_this select 0)) then {[(_this select 0), [], []] call BIS_fnc_unitHeadgear;}";
         };
     };
     
@@ -130,21 +139,6 @@ class CfgVehicles
 
     class spagistan_soldier_m10_spagpat_summer: spagistan_soldier_spagistan_army_base
     {
-        class EventHandlers: EventHandlers
-        {
-            init="if (local (_this select 0)) then {[(_this select 0), [], []] call BIS_fnc_unitHeadgear;}";
-        };
-        headgearList[] = 
-        {
-            "spagistan_hemlet_m97_spagpat",
-            10,
-            "spagistan_hemlet_m97_spagpat_black_ess",
-            10,
-            "spagistan_hemlet_m97_spagpat_black_ess_bare",
-            10,
-            "spagistan_hemlet_m97_veil_spagpat",
-            5
-        };
         scope = 1;
         uniformClass = "spagistan_uniform_m10_spagpat_summer";
         model = "\rhssaf\addons\rhssaf_m_uniform_m10\rhssaf_uniform_m10_summer";
@@ -356,34 +350,12 @@ class CfgVehicles
         weapons[] =
         {
             "rhs_weap_ak74m_dtk",
-            "Binocular",
-            "Throw",
-            "Put"
-        };
-        respawnWeapons[] =
-        {
-            "rhs_weap_ak74m_dtk",
-            "Binocular",
-            "Throw",
-            "Put"
-        };
-    };
-    class spagistan_soldier_spagistan_army_sergeant: spagistan_soldier_spagistan_army_rifleman
-    {
-        displayName = "Squad Leader";
-        cost = 500000;
-        camouflage=1.4;
-        sensitivity=3.3;
-        icon = "iconManLeader";
-        weapons[]=
-        {
-            "rhs_weap_ak74m_dtk",
             "rhs_weap_makarov_pm",
             "Binocular",
             "Throw",
             "Put"
         };
-        respawnWeapons[]=
+        respawnWeapons[] =
         {
             "rhs_weap_ak74m_dtk",
             "rhs_weap_makarov_pm",
@@ -417,6 +389,13 @@ class CfgVehicles
             "rhs_mag_rgd5",
             "rhs_mag_rdg2_white"
         };
+    };
+    class spagistan_soldier_spagistan_army_sergeant: spagistan_soldier_spagistan_army_corporal
+    {
+        displayName = "Squad Leader";
+        cost = 500000;
+        icon = "iconManLeader";        
+        backpack = "spagistan_TFAR_mr3000";
     };
 };
 
