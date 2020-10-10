@@ -102,7 +102,7 @@ class CfgWeapons
         allowedFacewear[] =
         {
             "G_Aviator"
-        }
+        };
         hiddenSelectionsTextures[] =
         {
             "\spagistan\addons\spagistan_t_gear\data\spagistan_m97_spagpat_co.paa",
