@@ -99,6 +99,10 @@ class CfgWeapons
         dlc = "spagistan";
         author = "Spagistan Mod Authors";
         displayName = "M97 (Spagpat/Veil)"; //todo: consistency
+        allowedFacewear[] =
+        {
+            "G_Aviator"
+        }
         hiddenSelectionsTextures[] =
         {
             "\spagistan\addons\spagistan_t_gear\data\spagistan_m97_spagpat_co.paa",
