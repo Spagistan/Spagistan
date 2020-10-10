@@ -94,7 +94,7 @@ class CfgWeapons
             "\rhssaf\addons\rhssaf_t_headgear_m97\data\rhssaf_m97_ess_black_co.paa"
         };
     };
-    class spagistan_helment_m97_veil_spagpat: rhssaf_helmet_m97_veil_woodland
+    class spagistan_helmet_m97_veil_spagpat: rhssaf_helmet_m97_veil_woodland
     {
         dlc = "spagistan";
         author = "Spagistan Mod Authors";
