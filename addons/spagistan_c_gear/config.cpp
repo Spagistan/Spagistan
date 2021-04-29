@@ -224,7 +224,7 @@ class CfgVehicles
     {
         dlc = "spagistan";
         author = "Spagistan Mod Authors";
-        displayName = "MR3000 BWMOD [SPAGPAT]"; //todo: consistency w/ other kit
+        displayName = "MR3000 BWMOD (Spagpat)";
         hiddenSelectionsTextures[] =
         {
             "\spagistan\addons\spagistan_t_gear\data\backpack_spagistan_mr3000_spagpat_ca.paa"
