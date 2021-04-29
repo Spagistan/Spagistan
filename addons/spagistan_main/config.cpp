@@ -45,10 +45,10 @@ class CfgMods
     class Mod_Base;
     class spagistan: Mod_Base
     {
-        picture = "\spagistan\addons\spagistan_main\data\spagistan_logo_co.paa";
-        logo = "\spagistan\addons\spagistan_main\data\spagistan_logo_co.paa";
-        logoOver = "\spagistan\addons\spagistan_main\data\spagistan_logo_co.paa";
-        logoSmall = "\spagistan\addons\spagistan_main\data\spagistan_logo_co.paa";
+        picture = "\spagistan\addons\spagistan_main\data\spagistan_logo_ca.paa";
+        logo = "\spagistan\addons\spagistan_main\data\spagistan_logo_ca.paa";
+        logoOver = "\spagistan\addons\spagistan_main\data\spagistan_logo_ca.paa";
+        logoSmall = "\spagistan\addons\spagistan_main\data\spagistan_logo_ca.paa";
         dlcColor[] = {0,0,0,1};
         fieldManualTopicaAndHint[] = {};
         hideName = 1;
@@ -137,7 +137,7 @@ class CfgFactionClasses
         side = 1;
         genericNames = "SpagistaniMen";
         author = "Spagistan Mod Authors";
-        icon = "\spagistan\addons\spagistan_main\data\spagistan_logo_co.paa";
+        icon = "\spagistan\addons\spagistan_main\data\spagistan_logo_ca.paa";
         flag = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
         backpack_tf_faction_radio = "TFAR_mr3000";
         personal_tf_faction_radio = "TFAR_anprc148jem";
