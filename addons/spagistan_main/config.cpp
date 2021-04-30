@@ -177,7 +177,7 @@ class CfgUnitInsignia
     {
         displayName = "Spagistan";
         author = "Spagistan Mod Authors";
-        texture = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
-        textureVehicle = "\spagistan\addons\spagistan_main\data\flags\spagistan_flag_spagistan_ca.paa";
+        texture = "\spagistan\addons\spagistan_main\data\spagistan_patch_ca.paa";
+        textureVehicle = "\spagistan\addons\spagistan_main\data\spagistan_patch_ca.paa";
     };
 };
